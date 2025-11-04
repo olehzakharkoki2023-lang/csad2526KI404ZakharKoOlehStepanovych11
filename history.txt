@@ -1,3 +1,6 @@
 Створи main.cpp з мінімальною програмою "Hello World".
 Згенеруй базовий CMakeLists.txt для main.cpp.
-Запусти СMakeLists.txt щоб на виході я получив ехе файл який ти також маєш запустити щоб на екран вивелось Hello World
+Запусти СMakeLists.txt щоб на виході я получив ехе файл який ти також маєш запустити щоб на екран вивелось Hello World.
+Створи два файли: math_operations.h i math_operations.cpp. У файлі math_operations.h оголоси функцію int add(int a, int b); з коментарем, що це проста функція для додавання двох чисел. У файлі math_operations.cpp реалізуй цю функцію.
+Створи каталог tests. У ньому потрібно створити файл unit_tests.cpp. В цьому файлі мають бути юніт тести для файлу з math_operations.h використовуючи Google Test. Створи кілька тестів: Додавання двох позитивних чисел. Додавання від'ємних чисел. Додавання нуля. Додавання великого числа. Файл має містити основну функцію main() для запуску тестів.
+Онови CMakeLists.txt: підключи Threads, спробуй знайти Google Test, а якщо не знайдеш підтягни через FetchContent з тегом v1.14.0. Створи статичну бібліотеку math_operations, виконуваний файл test_app із main.cpp, тестовий таргет unit_tests і зареєструй тест через enable_testing() та add_test(); додай ціль run_tests, яка викликає ctest -C $<CONFIG> --output-on-failure.
