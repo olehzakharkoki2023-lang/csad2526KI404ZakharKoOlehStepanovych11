@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/3697afd3647df2897576b819781b15fb/googletest-populate.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/e7bada9a7cc11f134de7728725fd6503/googletest-populate-complete.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-build.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-configure.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-download.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-install.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-mkdir.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-patch.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-test.rule
+C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/_deps/googletest-subbuild/CMakeFiles/7219d8db128e71e4cf9dd87e0da63e82/googletest-populate-update.rule

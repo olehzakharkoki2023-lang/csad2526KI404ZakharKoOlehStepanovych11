@@ -1,0 +1,10 @@
+^C:\USERS\ADMIN\DESKTOP\CSAD2526KI404ZAKHARKOOLEHSTEPANOVYCH11\BUILD\CMAKEFILES\218D051BD3454F2584517BA5AB6C7BEC\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11 -BC:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Admin/Desktop/csad2526KI404ZakharKoOlehStepanovych11/build/csad2526KI404ZakharKoOlehStepanovych11.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
