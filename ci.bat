@@ -3,7 +3,7 @@
 :: Exit immediately if a command fails
 setlocal enabledelayedexpansion
 
-:: Create build directory if it doesn't exist
+:: --- 1. Create build directory if it doesn't exist ---
 if not exist build (
     echo Creating build directory...
     mkdir build
@@ -12,7 +12,7 @@ if not exist build (
 :: Navigate to the build directory
 cd build
 
-:: Configure the project
+:: --- 2. Configure the project ---
 cmake ..
 if %errorlevel% neq 0 (
     echo CMake configuration FAILED.
@@ -20,16 +20,18 @@ if %errorlevel% neq 0 (
 )
 echo CMake configuration SUCCESS.
 
-:: Build the project
-cmake --build .
+:: --- 3. Build the project ---
+:: Build the project with the specified configuration (e.g., Debug)
+cmake --build . --config Debug
 if %errorlevel% neq 0 (
     echo Build FAILED.
     exit /b 1
 )
 echo Build SUCCESS.
 
-:: Run tests
-ctest --output-on-failure
+:: --- 4. Run tests (FIXED to use Debug configuration) ---
+:: We use ctest to run tests compiled in the Debug directory
+ctest --test-dir . -C Debug --output-on-failure
 if %errorlevel% neq 0 (
     echo Tests FAILED.
     exit /b 1
