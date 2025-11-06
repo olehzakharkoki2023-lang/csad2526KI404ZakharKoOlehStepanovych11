@@ -1,0 +1,54 @@
+name: C++ CI
+
+on:
+  push:
+    branches:
+      - "**/develop"
+      - "**/master"
+  pull_request:
+    branches:
+      - "**/develop"
+      - "**/master"
+
+jobs:
+  cross_build:
+    name: Cross-platform Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up CMake
+        if: runner.os != 'Windows'
+        run: |
+          if ! command -v cmake &> /dev/null; then
+            sudo apt-get update && sudo apt-get install -y cmake
+          fi
+        shell: bash
+
+      - name: Make ci.sh executable (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: chmod +x ci.sh
+        shell: bash
+
+      - name: Run build script (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: ./ci.sh
+        shell: bash
+
+      - name: Run build script (Windows)
+        if: runner.os == 'Windows'
+        run: .\ci.bat
+        shell: cmd
+
+      - name: Build succeeded
+        run: echo "Build succeeded"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output-${{ matrix.os }}
+          path: build
